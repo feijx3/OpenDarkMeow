@@ -1,0 +1,22 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package net.ccbluex.liquidbounce.event.events.tick;
+
+import kotlin.Metadata;
+import net.ccbluex.liquidbounce.event.Event;
+
+@Metadata(mv={2, 2, 0}, k=1, xi=48, d1={"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u0002\u0004\u0005B\u0007\u00a2\u0006\u0004\b\u0002\u0010\u0003\u00a8\u0006\u0006"}, d2={"Lnet/ccbluex/liquidbounce/event/events/tick/TickEvent;", "", "<init>", "()V", "Pre", "Post", "DarkMeow"})
+public final class TickEvent {
+
+    @Metadata(mv={2, 2, 0}, k=1, xi=48, d1={"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\b\u0002\u0010\u0003\u00a8\u0006\u0004"}, d2={"Lnet/ccbluex/liquidbounce/event/events/tick/TickEvent$Post;", "Lnet/ccbluex/liquidbounce/event/Event;", "<init>", "()V", "DarkMeow"})
+    public static final class Post
+    extends Event {
+    }
+
+    @Metadata(mv={2, 2, 0}, k=1, xi=48, d1={"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\b\u0002\u0010\u0003\u00a8\u0006\u0004"}, d2={"Lnet/ccbluex/liquidbounce/event/events/tick/TickEvent$Pre;", "Lnet/ccbluex/liquidbounce/event/Event;", "<init>", "()V", "DarkMeow"})
+    public static final class Pre
+    extends Event {
+    }
+}
+

@@ -1,0 +1,50 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  kotlinx.coroutines.InternalCoroutinesApi
+ *  org.jetbrains.annotations.NotNull
+ *  org.jetbrains.annotations.Nullable
+ */
+package kotlinx.coroutines;
+
+import kotlin.Metadata;
+import kotlinx.coroutines.ChildHandle;
+import kotlinx.coroutines.DisposableHandle;
+import kotlinx.coroutines.InternalCoroutinesApi;
+import kotlinx.coroutines.Job;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+@Metadata(mv={2, 1, 0}, k=1, xi=48, d1={"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0003\n\u0000\n\u0002\u0010\u000e\n\u0000\b\u00c7\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\t\b\u0002\u00a2\u0006\u0004\b\u0003\u0010\u0004J\b\u0010\t\u001a\u00020\nH\u0016J\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0016J\b\u0010\u000f\u001a\u00020\u0010H\u0016R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00068VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\b\u0007\u0010\b\u00a8\u0006\u0011"}, d2={"Lkotlinx/coroutines/NonDisposableHandle;", "Lkotlinx/coroutines/DisposableHandle;", "Lkotlinx/coroutines/ChildHandle;", "<init>", "()V", "parent", "Lkotlinx/coroutines/Job;", "getParent", "()Lkotlinx/coroutines/Job;", "dispose", "", "childCancelled", "", "cause", "", "toString", "", "kotlinx-coroutines-core"})
+@InternalCoroutinesApi
+public final class NonDisposableHandle
+implements DisposableHandle,
+ChildHandle {
+    @NotNull
+    public static final NonDisposableHandle INSTANCE = new NonDisposableHandle();
+
+    private NonDisposableHandle() {
+    }
+
+    @Override
+    @Nullable
+    public Job getParent() {
+        return null;
+    }
+
+    @Override
+    public void dispose() {
+    }
+
+    @Override
+    public boolean childCancelled(@NotNull Throwable cause) {
+        return false;
+    }
+
+    @NotNull
+    public String toString() {
+        return "NonDisposableHandle";
+    }
+}
+

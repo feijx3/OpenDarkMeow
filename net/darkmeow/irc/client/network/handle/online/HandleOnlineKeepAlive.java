@@ -1,0 +1,30 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.jetbrains.annotations.NotNull
+ */
+package net.darkmeow.irc.client.network.handle.online;
+
+import net.darkmeow.irc.client.network.IRCClientNetworkManager;
+import net.darkmeow.irc.lib.io.netty.channel.ChannelHandlerContext;
+import net.darkmeow.irc.lib.io.netty.channel.SimpleChannelInboundHandler;
+import net.darkmeow.irc.network.packet.online.c2s.C2SPacketKeepAlive;
+import net.darkmeow.irc.network.packet.online.s2c.S2CPacketKeepAlive;
+import org.jetbrains.annotations.NotNull;
+
+public final class HandleOnlineKeepAlive
+extends SimpleChannelInboundHandler<S2CPacketKeepAlive> {
+    @NotNull
+    public final IRCClientNetworkManager connection;
+
+    public HandleOnlineKeepAlive(@NotNull IRCClientNetworkManager connection) {
+        this.connection = connection;
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, S2CPacketKeepAlive packet) {
+        this.connection.sendPacket(new C2SPacketKeepAlive(packet.getId()));
+    }
+}
+
